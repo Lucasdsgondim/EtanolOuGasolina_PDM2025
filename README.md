@@ -27,11 +27,15 @@ preco_max_etanol = eficiencia_relativa * preco_gasolina
 Se (preco_etanol <= preco_max_etanol)  =>  RECOMENDA ETANOL
 Senão                                   =>  RECOMENDA GASOLINA
 ```
-Exemplos rápidos
+Exemplos rápidos:
+
 ⦁	Exemplo A  
+
 Gasolina = `5,00` • Etanol = `3,50` • Eficiência = `75%`  
 `preco_max_etanol = 0,75 * 5,00 = 3,75` → `3,50 <= 3,75` ⇒ Etanol ✅
+
 ⦁	Exemplo B  
+
 Gasolina = `5,00` • Etanol = `3,90` • Eficiência = `75%`  
 `preco_max_etanol = 0,75 * 5,00 = 3,75` → `3,90 > 3,75` ⇒ Gasolina ✅
 
