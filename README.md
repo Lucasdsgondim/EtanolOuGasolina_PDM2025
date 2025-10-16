@@ -2,9 +2,6 @@
 
 Ajuda você a decidir rapidamente entre **etanol** e **gasolina** no posto, com base nos **preços** informados e na **eficiência relativa** do etanol no seu motor.
 
-> **Regra de bolso**: se \( preço\_etanol / preço\_gasolina \le \eta \), recomenda **Etanol**; caso contrário, **Gasolina**.  
-> No app, \(\eta\) (eficiência relativa do etanol) é ajustável de **70% a 80%** via slider.
-
 ---
 
 ## 📲 Visão geral
