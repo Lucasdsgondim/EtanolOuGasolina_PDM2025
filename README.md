@@ -33,16 +33,13 @@ Seja \( p_E \) o preço do **etanol**, \( p_G \) o preço da **gasolina** e \( \
 ## 🚀 Instalação e execução
 
 1. **Clonar o repositório**
-   ```bash
-   git clone https://github.com/<seu-usuario>/<seu-repo>.git
-   cd <seu-repo>
-   ```
+   - Basta clonar este repositório
 
-2. **Abrir no Android Studio**
+3. **Abrir no Android Studio**
    - Use uma versão atualizada do Android Studio com suporte ao Jetpack Compose.
    - Sincronize o Gradle normalmente.
 
-3. **Executar**
+4. **Executar**
    - Escolha um dispositivo físico (com depuração USB) ou um emulador.
    - Clique em **Run** ▶️.
 
