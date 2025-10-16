@@ -93,7 +93,7 @@ fun TextBoxesAndTitles(modifier: Modifier = Modifier){
                 .padding(bottom = 20.dp)
                 .padding(horizontal = 26.dp))
         Text(
-            text = "- Abaixo, digite os valores dos combustíveis e selecione a eficiência do etanol para seu motor.\nUtilize '.' (ponto) para a virgula. \nEx: 6,30 = 6.30.",
+            text = "- Abaixo, digite os valores dos combustíveis e selecione a eficiência do etanol para seu motor.",
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             fontFamily = FontFamily.Monospace,
             modifier = Modifier
@@ -154,21 +154,22 @@ fun TextBoxesAndTitles(modifier: Modifier = Modifier){
 
 
 fun etanolOuGasolina(valorEtanol: String, valorGasolina: String, efyRatio: Float): String {
-    val etanol = valorEtanol.toFloatOrNull()
-    val gasolina = valorGasolina.toFloatOrNull()
-    if (etanol == null || gasolina == null)
-    {
-        return ""
+    val etanol = valorEtanol.replace(',', '.').toFloatOrNull()
+    val gasolina = valorGasolina.replace(',', '.').toFloatOrNull()
+    if (etanol == null || gasolina == null) {
+        return "Preencha valores válidos (ex.: 4.80)."
     }
-    if (etanol <= gasolina * efyRatio)
-    {
-        return "Você deve abastecer com Etanol"
+    if (etanol <= 0f || gasolina <= 0f) {
+        return "Preços devem ser maiores que zero."
     }
-    else
-    {
-        return "Você deve abastecer com Gasolina"
+    return if (etanol / gasolina <= efyRatio) {
+        "Você deve abastecer com Etanol"
+    }
+    else {
+        "Você deve abastecer com Gasolina"
     }
 }
+
 
 @Composable
 fun GradientSlider(
