@@ -93,7 +93,7 @@ fun TextBoxesAndTitles(modifier: Modifier = Modifier){
                 .padding(bottom = 20.dp)
                 .padding(horizontal = 26.dp))
         Text(
-            text = "- Abaixo, digite os valores dos combustíveis e selecione a eficiência do etanol para seu motor",
+            text = "- Abaixo, digite os valores dos combustíveis e selecione a eficiência do etanol para seu motor.\nUtilize '.' (ponto) para a virgula. \nEx: 6,30 = 6.30.",
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             fontFamily = FontFamily.Monospace,
             modifier = Modifier
